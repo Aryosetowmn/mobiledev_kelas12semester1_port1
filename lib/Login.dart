@@ -101,25 +101,46 @@ class _LoginState extends State<Login> {
                         MaterialPageRoute(builder: (context) => Register()));
                   }),
             ),
+            // Container(
+            //     padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
+            //     width: double.infinity,
+            //     child: RichText(
+            //       textAlign: TextAlign.right,
+            //       text: TextSpan(
+            //         style: TextStyle(color: Colors.black, fontSize: 14),
+            //         children: <TextSpan>[
+            //           TextSpan(
+            //               text: "Don't have an account? ",
+            //               style: TextStyle(
+            //                 color: Colors.black,
+            //               )),
+            //           TextSpan(
+            //               text: 'create a new account ',
+            //               style: TextStyle(color: greenColor)),
+            //         ],
+            //       ),
+            //     )),
             Container(
-                padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-                width: double.infinity,
-                child: RichText(
-                  textAlign: TextAlign.right,
-                  text: TextSpan(
-                    style: TextStyle(color: Colors.black, fontSize: 14),
-                    children: <TextSpan>[
-                      TextSpan(
-                          text: 'Already have an account? ',
-                          style: TextStyle(
-                            color: Colors.black,
-                          )),
-                      TextSpan(
-                          text: 'create a new account ',
-                          style: TextStyle(color: greenColor)),
-                    ],
-                  ),
-                )),
+              padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
+              alignment: Alignment.centerRight,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text("Don't have an account? ",
+                      style: TextStyle(
+                        color: Colors.black,
+                      )),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Register()));
+                    },
+                    child: Text('create a new account',
+                        style: TextStyle(color: greenColor)),
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),

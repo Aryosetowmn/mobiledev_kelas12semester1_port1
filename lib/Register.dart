@@ -133,23 +133,25 @@ class _RegisterState extends State<Register> {
                   }),
             ),
             Container(
-                padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-                width: double.infinity,
-                child: RichText(
-                  textAlign: TextAlign.center,
-                  text: TextSpan(
-                    style: TextStyle(color: Colors.black, fontSize: 14),
-                    children: <TextSpan>[
-                      TextSpan(
-                          text: 'Already have an account? ',
-                          style: TextStyle(
-                            color: Colors.black,
-                          )),
-                      TextSpan(
-                          text: 'Login ', style: TextStyle(color: greenColor)),
-                    ],
-                  ),
-                )),
+              padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
+              alignment: Alignment.centerRight,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text("Already have an account? ",
+                      style: TextStyle(
+                        color: Colors.black,
+                      )),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Login()));
+                    },
+                    child: Text('Login', style: TextStyle(color: greenColor)),
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
