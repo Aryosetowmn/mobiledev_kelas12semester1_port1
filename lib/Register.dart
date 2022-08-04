@@ -24,19 +24,23 @@ class _RegisterState extends State<Register> {
         child: Column(
           children: [
             Container(
-                child: ElevatedButton.icon(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Login()));
-                    },
-                    icon: Icon(
-                      // <-- Icon
-                      Icons.arrow_back,
-                      size: 24.0,
-                    ),
-                    label: Text('halo'))),
+              width: double.infinity,
+              padding: EdgeInsets.all(10),
+              alignment: Alignment.centerLeft,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Login()));
+                },
+                child: Icon(
+                  Icons.arrow_back,
+                  color: greenColor,
+                  size: 40,
+                ),
+              ),
+            ),
             Container(
-                padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                padding: EdgeInsets.fromLTRB(10, 20, 10, 0),
                 child: Text(
                   'Create Account',
                   textAlign: TextAlign.center,
@@ -46,12 +50,24 @@ class _RegisterState extends State<Register> {
                 )),
             Container(
               padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-              child: Text('Sign to continue',
+              child: Text('Create a new account',
                   textAlign: TextAlign.center,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                       fontSize: 14, color: Color.fromARGB(255, 205, 205, 205))),
             ),
+            Container(
+                padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
+                child: TextField(
+                    style: TextStyle(color: greenColor),
+                    decoration: InputDecoration(
+                        border: InputBorder.none,
+                        labelStyle: TextStyle(color: Colors.black54),
+                        labelText: 'Name',
+                        prefixIcon: Icon(
+                          Icons.supervised_user_circle,
+                          color: greenColor,
+                        )))),
             Container(
                 padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
                 child: TextField(
@@ -69,6 +85,18 @@ class _RegisterState extends State<Register> {
                 child: TextField(
                     style: TextStyle(color: greenColor),
                     decoration: InputDecoration(
+                        border: InputBorder.none,
+                        labelStyle: TextStyle(color: Colors.black54),
+                        labelText: 'Phone',
+                        prefixIcon: Icon(
+                          Icons.phone_android,
+                          color: greenColor,
+                        )))),
+            Container(
+                padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
+                child: TextField(
+                    style: TextStyle(color: greenColor),
+                    decoration: InputDecoration(
                       labelStyle: TextStyle(color: Colors.black54),
                       border: InputBorder.none,
                       labelText: 'Password',
@@ -78,32 +106,37 @@ class _RegisterState extends State<Register> {
                       ),
                     ))),
             Container(
-              margin: EdgeInsets.fromLTRB(30, 10, 30, 10),
-              width: double.infinity,
-              child: Text(
-                'Forgot Password?',
-                textAlign: TextAlign.right,
-                style: const TextStyle(color: Color.fromARGB(255, 1, 186, 118)),
-              ),
-            ),
-            Padding(
+                padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
+                child: TextField(
+                    style: TextStyle(color: greenColor),
+                    decoration: InputDecoration(
+                      labelStyle: TextStyle(color: Colors.black54),
+                      border: InputBorder.none,
+                      labelText: 'Confirm Password',
+                      prefixIcon: Icon(
+                        Icons.lock_outline_rounded,
+                        color: greenColor,
+                      ),
+                    ))),
+            Container(
               padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
               child: ElevatedButton(
-                  child: const Text('Login'),
+                  child: const Text('Create Account'),
                   style: ElevatedButton.styleFrom(
                       textStyle: const TextStyle(fontSize: 20),
                       primary: greenColor,
                       minimumSize: const Size.fromHeight(50),
                       padding: EdgeInsets.fromLTRB(30, 20, 30, 20)),
                   onPressed: () {
-                    onLogin();
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Login()));
                   }),
             ),
             Container(
                 padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
                 width: double.infinity,
                 child: RichText(
-                  textAlign: TextAlign.right,
+                  textAlign: TextAlign.center,
                   text: TextSpan(
                     style: TextStyle(color: Colors.black, fontSize: 14),
                     children: <TextSpan>[
@@ -113,8 +146,7 @@ class _RegisterState extends State<Register> {
                             color: Colors.black,
                           )),
                       TextSpan(
-                          text: 'create a new account ',
-                          style: TextStyle(color: greenColor)),
+                          text: 'Login ', style: TextStyle(color: greenColor)),
                     ],
                   ),
                 )),
