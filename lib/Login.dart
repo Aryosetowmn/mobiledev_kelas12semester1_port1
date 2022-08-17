@@ -28,7 +28,7 @@ class _LoginState extends State<Login> {
             Container(
               padding: EdgeInsets.fromLTRB(20, 100, 20, 0),
               child: Icon(
-                Icons.supervised_user_circle,
+                Icons.account_circle,
                 color: greyColor,
                 size: 150,
                 semanticLabel: 'Text to announce in accessibility modes',
@@ -54,16 +54,17 @@ class _LoginState extends State<Login> {
             Container(
                 padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
                 child: TextField(
-                    controller: modelEmail,
-                    style: TextStyle(color: greenColor),
-                    decoration: InputDecoration(
-                        border: InputBorder.none,
-                        labelStyle: TextStyle(color: Colors.black54),
-                        labelText: 'Email',
-                        prefixIcon: Icon(
-                          Icons.email_outlined,
-                          color: greenColor,
-                        )))),
+                  controller: modelEmail,
+                  style: TextStyle(color: greenColor),
+                  decoration: InputDecoration(
+                      border: InputBorder.none,
+                      labelStyle: TextStyle(color: Colors.black54),
+                      labelText: 'Email',
+                      prefixIcon: Icon(
+                        Icons.email_outlined,
+                        color: greenColor,
+                      )),
+                )),
             Container(
                 padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
                 child: TextField(
