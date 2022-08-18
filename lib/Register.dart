@@ -58,66 +58,86 @@ class _RegisterState extends State<Register> {
             ),
             Container(
                 padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-                child: TextField(
-                    style: TextStyle(color: greenColor),
-                    decoration: InputDecoration(
-                        border: InputBorder.none,
-                        labelStyle: TextStyle(color: Colors.black54),
-                        labelText: 'Name',
-                        prefixIcon: Icon(
-                          Icons.supervised_user_circle,
-                          color: greenColor,
-                        )))),
+                child: Theme(
+                    data: Theme.of(context).copyWith(
+                        colorScheme: ThemeData()
+                            .colorScheme
+                            .copyWith(primary: greenColor)),
+                    child: TextField(
+                        style: TextStyle(color: greenColor),
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            labelStyle: TextStyle(color: Colors.black54),
+                            labelText: 'Name',
+                            prefixIcon: Icon(
+                              Icons.account_circle,
+                            ))))),
             Container(
                 padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-                child: TextField(
-                    style: TextStyle(color: greenColor),
-                    decoration: InputDecoration(
-                        border: InputBorder.none,
-                        labelStyle: TextStyle(color: Colors.black54),
-                        labelText: 'Email',
-                        prefixIcon: Icon(
-                          Icons.email_outlined,
-                          color: greenColor,
-                        )))),
+                child: Theme(
+                    data: Theme.of(context).copyWith(
+                        colorScheme: ThemeData()
+                            .colorScheme
+                            .copyWith(primary: greenColor)),
+                    child: TextField(
+                        style: TextStyle(color: greenColor),
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            labelStyle: TextStyle(color: Colors.black54),
+                            labelText: 'Email',
+                            prefixIcon: Icon(
+                              Icons.email_outlined,
+                            ))))),
             Container(
                 padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-                child: TextField(
-                    style: TextStyle(color: greenColor),
-                    decoration: InputDecoration(
-                        border: InputBorder.none,
-                        labelStyle: TextStyle(color: Colors.black54),
-                        labelText: 'Phone',
-                        prefixIcon: Icon(
-                          Icons.phone_android,
-                          color: greenColor,
-                        )))),
+                child: Theme(
+                    data: Theme.of(context).copyWith(
+                        colorScheme: ThemeData()
+                            .colorScheme
+                            .copyWith(primary: greenColor)),
+                    child: TextField(
+                        style: TextStyle(color: greenColor),
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            labelStyle: TextStyle(color: Colors.black54),
+                            labelText: 'Phone',
+                            prefixIcon: Icon(
+                              Icons.phone_android,
+                            ))))),
             Container(
                 padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-                child: TextField(
-                    style: TextStyle(color: greenColor),
-                    decoration: InputDecoration(
-                      labelStyle: TextStyle(color: Colors.black54),
-                      border: InputBorder.none,
-                      labelText: 'Password',
-                      prefixIcon: Icon(
-                        Icons.lock_outline_rounded,
-                        color: greenColor,
-                      ),
-                    ))),
+                child: Theme(
+                    data: Theme.of(context).copyWith(
+                        colorScheme: ThemeData()
+                            .colorScheme
+                            .copyWith(primary: greenColor)),
+                    child: TextField(
+                        obscureText: true,
+                        style: TextStyle(color: greenColor),
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            labelStyle: TextStyle(color: Colors.black54),
+                            labelText: 'Password',
+                            prefixIcon: Icon(
+                              Icons.lock_outline_rounded,
+                            ))))),
             Container(
                 padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-                child: TextField(
-                    style: TextStyle(color: greenColor),
-                    decoration: InputDecoration(
-                      labelStyle: TextStyle(color: Colors.black54),
-                      border: InputBorder.none,
-                      labelText: 'Confirm Password',
-                      prefixIcon: Icon(
-                        Icons.lock_outline_rounded,
-                        color: greenColor,
-                      ),
-                    ))),
+                child: Theme(
+                    data: Theme.of(context).copyWith(
+                        colorScheme: ThemeData()
+                            .colorScheme
+                            .copyWith(primary: greenColor)),
+                    child: TextField(
+                        obscureText: true,
+                        style: TextStyle(color: greenColor),
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            labelStyle: TextStyle(color: Colors.black54),
+                            labelText: 'Confirm Password',
+                            prefixIcon: Icon(
+                              Icons.lock_outline_rounded,
+                            ))))),
             Container(
               padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
               child: ElevatedButton(

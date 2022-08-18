@@ -53,32 +53,39 @@ class _LoginState extends State<Login> {
             ),
             Container(
                 padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-                child: TextField(
-                  controller: modelEmail,
-                  style: TextStyle(color: greenColor),
-                  decoration: InputDecoration(
-                      border: InputBorder.none,
-                      labelStyle: TextStyle(color: Colors.black54),
-                      labelText: 'Email',
-                      prefixIcon: Icon(
-                        Icons.email_outlined,
-                        color: greenColor,
-                      )),
-                )),
+                child: Theme(
+                    data: Theme.of(context).copyWith(
+                        colorScheme: ThemeData()
+                            .colorScheme
+                            .copyWith(primary: greenColor)),
+                    child: TextField(
+                        controller: modelEmail,
+                        style: TextStyle(color: greenColor),
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            labelStyle: TextStyle(color: Colors.black54),
+                            labelText: 'Email',
+                            prefixIcon: Icon(
+                              Icons.email_outlined,
+                            ))))),
             Container(
                 padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-                child: TextField(
-                    controller: modelPassword,
-                    style: TextStyle(color: greenColor),
-                    decoration: InputDecoration(
-                      labelStyle: TextStyle(color: Colors.black54),
-                      border: InputBorder.none,
-                      labelText: 'Password',
-                      prefixIcon: Icon(
-                        Icons.lock_outline_rounded,
-                        color: greenColor,
-                      ),
-                    ))),
+                child: Theme(
+                    data: Theme.of(context).copyWith(
+                        colorScheme: ThemeData()
+                            .colorScheme
+                            .copyWith(primary: greenColor)),
+                    child: TextField(
+                        controller: modelPassword,
+                        obscureText: true,
+                        style: TextStyle(color: greenColor),
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            labelStyle: TextStyle(color: Colors.black54),
+                            labelText: 'Password',
+                            prefixIcon: Icon(
+                              Icons.lock_outline_rounded,
+                            ))))),
             Container(
               margin: EdgeInsets.fromLTRB(30, 10, 30, 10),
               width: double.infinity,
