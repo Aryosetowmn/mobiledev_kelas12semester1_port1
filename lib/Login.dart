@@ -100,10 +100,11 @@ class _LoginState extends State<Login> {
               child: ElevatedButton(
                   child: const Text('Login'),
                   style: ElevatedButton.styleFrom(
-                      textStyle: const TextStyle(fontSize: 20),
-                      primary: greenColor,
-                      minimumSize: const Size.fromHeight(50),
-                      padding: EdgeInsets.fromLTRB(30, 20, 30, 20)),
+                    textStyle: const TextStyle(fontSize: 20),
+                    backgroundColor: greenColor,
+                    minimumSize: const Size.fromHeight(50),
+                    padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
+                  ),
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Register()));
